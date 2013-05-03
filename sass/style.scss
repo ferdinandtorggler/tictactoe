@@ -1,0 +1,133 @@
+$bright: #EFEDDF;
+$dark: #3F4944;
+$brighter: lighten($bright, 8%);
+$buttonforeground: #FFFFFF;
+$buttonbackground: #005D94;
+
+$fieldwidth: 150px;
+$border: 2px;
+
+@font-face {
+	font-family: game;
+	src: url("../fonts/brankovic.otf");
+}
+
+@font-face {
+	font-family: text;
+	font-weight: normal;
+	src: url("../fonts/brankovic.ttf");
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+// Helpers
+.center {
+	margin: auto auto;
+	text-align: center;
+}
+
+.wrapper {
+	background-color: $bright;
+	margin: 40px;
+	box-shadow: 0 0 30px $dark;
+}
+
+	body {
+		background-color: brighten($bright, 3%);
+		color: $dark;
+		font-family: "text", "sans-serif";
+		font-size: 2em;
+	}
+
+		header {
+			color: $bright;
+			background-color: $dark;
+			padding: 20px;
+			h1 {
+				font-size: 3.2em;
+				font-weight: normal;
+			}
+			h2 {
+				font-size: 0.7em;
+				font-weight: normal;
+			}
+		}
+
+	.gamehalf{
+		width: 50%;
+		display: inline-block;
+		text-align: right;
+	}
+
+		.gameview {
+			margin: 50px 0;
+			width: $fieldwidth*3 + $border*6;
+			height: $fieldwidth*3 + $border*6;
+
+			font-family: "game", "sans-serif";
+
+			// Disallow Selection
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+
+			display: inline-block;
+		}
+
+			.fieldview {
+				font-size: 4em;
+				background-color: $brighter;
+				border: solid $border $bright;
+				width: $fieldwidth;
+				height: $fieldwidth;
+				line-height: $fieldwidth;
+				cursor: pointer;
+				display: inline-block;
+				vertical-align: top; // fixes repositioning of cells with content
+				text-align: center;
+			}
+
+	.statshalf {
+		width: 50%;
+		display: inline-block;
+		text-align: center;
+		height: 100%;
+	}
+
+		.upperstats {
+			height: 50%;
+		}
+
+			.winnerview {
+				margin-top: 10px;
+			}
+
+		.lowerstats {
+			height: 50%;
+		}
+
+			.playagain {
+				margin-top: 10px;
+				background-color: $dark;
+				width: 300px;
+				height: 80px;
+				line-height: 80px;
+				border-radius: 5px;
+				text-decoration: none;
+				color: $bright;
+				display: inline-block;
+				text-align: center;
+			}
+
+		.backbone {
+			font-size: 18px;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}

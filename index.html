@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TicTacToe</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body>
+
+	<div class="wrapper center">
+		<header>
+			<h1 class="center">Good Old Tic Tac Toe</h1>
+			<h2 class="center">Play it like you did in grade school</h2>
+		</header>
+
+		<section>
+			<div class="gamehalf">
+				<section class="gameview"></section>
+			</div><!-- comment removes space causing line break in layout
+			--><div class="statshalf">
+				<section class="upperstats">
+					<div class="winnerview"></div>
+				</section>
+				<section class="lowerstats">
+					<a href="" class="playagain">Restart Game!</a>
+				</section>
+			</div>
+		</section>
+
+		<p class="backbone">Hell yesss! this is done with Backbone.js</p>
+
+
+	</div>
+
+	<!-- TEMPLATES -->
+
+	<script type="text/template" id="tmp-fieldview">
+	<% if (!status) {print("")} else {print(status)}%>
+	</script>
+	<script type="text/template" id="tmp-winnerview">
+	<% if (winner != "nobody") { print("Congratulations!"); } %> <%= winner %> wins
+	</script>
+
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.10/backbone-min.js"></script>
+
+	<script src="js/app.js"></script>
+	<script src="js/models.js"></script>
+	<script src="js/collections.js"></script>
+	<script src="js/views.js"></script>
+	<script src="js/router.js"></script>
+
+</body>
+</html>

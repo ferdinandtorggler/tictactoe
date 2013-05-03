@@ -31,7 +31,6 @@ App.Router = new (Backbone.Router.extend({
 	},
 
 	newgame: function () {
-		console.log("new game triggered");
 		App.player.set("winner", false);
 		App.gameFields.reset();
 		this.fillGame();

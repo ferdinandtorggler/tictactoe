@@ -5,11 +5,11 @@ App.Collections.FieldList = Backbone.Collection.extend({
 	selectWinner: function () {
 
 		if (this.checkIfPlayerWins("x"))
-			App.winner.set({winner: "x"});
+			App.player.set({winner: "x"});
 		else if (this.checkIfPlayerWins("o"))
-			App.winner.set({winner: "o"});
+			App.player.set({winner: "o"});
 		else if (this.checkIfEnded())
-			App.winner.set({winner: "nobody"});
+			App.player.set({winner: "nobody"});
 	},
 
 	checkIfEnded: function () {

@@ -54,14 +54,14 @@ App.Views.Game = Backbone.View.extend({
 
 });
 
-App.Views.Winner = Backbone.View.extend({
+App.Views.Player = Backbone.View.extend({
 
-	el: ".winnerview",
+	el: ".playerview",
 
-	template: _.template($("#tmp-winnerview").html()),
+	template: _.template($("#tmp-playerview").html()),
 
 	initialize: function () {
-		this.listenTo(App.winner, "change", this.gameEnded);
+		this.listenTo(App.player, "change", this.gameEnded);
 	},
 
 	gameEnded: function () {

@@ -21,7 +21,7 @@
 			</div><!-- comment removes space causing line break in layout
 			--><div class="statshalf">
 				<section class="upperstats">
-					<div class="winnerview"></div>
+					<div class="playerview">Current player: x</div>
 				</section>
 				<section class="lowerstats">
 					<a href="" class="playagain undecorated">Restart Game!</a>
@@ -39,8 +39,9 @@
 	<script type="text/template" id="tmp-fieldview">
 	<% if (!status) {print("")} else {print(status)}%>
 	</script>
-	<script type="text/template" id="tmp-winnerview">
-	<% if (winner != "nobody") { print("Congratulations!"); } %> <%= winner %> wins
+	<script type="text/template" id="tmp-playerview">
+	<p><% if (!winner) {print("Current player: " + current);} %></p>
+	<p><% if (winner) print(winner + " wins"); %></p>
 	</script>
 
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>

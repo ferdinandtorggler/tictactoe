@@ -9,7 +9,7 @@ $border: 2px;
 
 @font-face {
 	font-family: game;
-	src: url("../fonts/brankovic.otf");
+	src: url("../fonts/code.otf");
 }
 
 @font-face {
@@ -31,7 +31,6 @@ $border: 2px;
 
 .outer {
 	position: absolute;
-	top: 0;
 	font-size: 15px;
 	margin: 3px;
 	a {
@@ -43,19 +42,27 @@ $border: 2px;
 	text-decoration: none;
 }
 
-.wrapper {
-	background-color: $bright;
-	margin: 40px;
-	box-shadow: 0 0 30px $dark;
-	position: relative;
-	min-width: 1400px;
+body {
+	background-color: desaturate(lighten($dark, 55%), 100%);
+	color: $dark;
+	font-family: "text", "sans-serif";
+	font-size: 2em;
+
+	// Disallow Selection
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
-	body {
-		background-color: desaturate(lighten($dark, 55%), 100%);
-		color: $dark;
-		font-family: "text", "sans-serif";
-		font-size: 2em;
+	.wrapper {
+		background-color: $bright;
+		margin: 40px;
+		box-shadow: 0 0 30px $dark;
+		position: relative;
+		min-width: 1400px;
 	}
 
 		header {
@@ -90,27 +97,17 @@ $border: 2px;
 			margin: 50px 0;
 			width: $fieldwidth*3 + $border*6;
 			height: $fieldwidth*3 + $border*6;
-
 			font-family: "game", "sans-serif";
-
-			// Disallow Selection
-			-webkit-touch-callout: none;
-			-webkit-user-select: none;
-			-khtml-user-select: none;
-			-moz-user-select: none;
-			-ms-user-select: none;
-			user-select: none;
-
 			display: inline-block;
 		}
 
 			.fieldview {
-				font-size: 4em;
+				font-size: $fieldwidth;
 				background-color: $brighter;
 				border: solid $border $bright;
 				width: $fieldwidth;
 				height: $fieldwidth;
-				line-height: $fieldwidth;
+				line-height: $fieldwidth + 20px;
 				cursor: pointer;
 				display: inline-block;
 				vertical-align: top; // fixes repositioning of cells with content
@@ -121,23 +118,15 @@ $border: 2px;
 		width: 33%;
 		display: inline-block;
 		text-align: center;
+		font-size: 1.3em;
 	}
 
 		.upperstats {
 			height: 50%;
 		}
 
-			.playerview {
-				font-size: 1.8em;
-				margin-top: 10px;
-			}
-
-		.lowerstats {
-			height: 50%;
-		}
-
 			.playagain {
-				margin-top: $fieldwidth;
+				margin-top: $fieldwidth/3;
 				background-color: $dark;
 				width: 300px;
 				height: 80px;
@@ -149,9 +138,34 @@ $border: 2px;
 			}
 
 .backbone {
-	left: 0;
+	bottom: 5;
+	left: 50%;
+	width: 200px;
+	margin-left: -100px;
+	margin-top: 10px;
 }
 
 .github {
+	top: 0;
 	right: 0;
+	margin: 0;
 }
+
+p {
+	vertical-align: center;
+}
+
+	.middleheight {
+		vertical-align: bottom;
+		display: inline-block;
+		margin-right: 50px;
+		margin-bottom: 2*$fieldwidth/5;
+	}
+
+		.player {
+			font-family: "game", "sans-serif";
+		}
+
+		.big {
+			font-size: $fieldwidth;
+		}

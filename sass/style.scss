@@ -33,6 +33,7 @@ $border: 2px;
 	position: absolute;
 	bottom: 0;
 	font-size: 24px;
+	margin: 3px;
 	a {
 		color: $dark;
 	}
@@ -46,6 +47,7 @@ $border: 2px;
 	background-color: $bright;
 	margin: 40px;
 	box-shadow: 0 0 30px $dark;
+	position: relative;
 }
 
 	body {

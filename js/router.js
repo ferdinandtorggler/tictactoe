@@ -1,7 +1,7 @@
 App.Router = new (Backbone.Router.extend({
 
 	routes: {
-		"": "index"
+		"": "index",
 	},
 
 	index: function () {
@@ -24,6 +24,6 @@ App.Router = new (Backbone.Router.extend({
 		for (var x = 0; x < 3; x++)
 			for (var y = 0; y < 3; y++)
 				gameFields.add(new App.Models.Field({x: x, y: y}));
-	}
+	},
 
 }));

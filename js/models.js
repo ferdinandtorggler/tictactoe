@@ -21,15 +21,24 @@ App.Models.Player = Backbone.Model.extend({
 
 	defaults: {
 		current: "x",
-		winner: false
+		winner: false,
+		xTimes: 0,
+		oTimes: 0
 	},
 
 	togglePlayer: function () {
-		console.log(this.get("current"));
 		if (this.get("current") == "x")
 			this.set("current", "o");
 		else
 			this.set("current", "x");
+	},
+
+	setWinner: function (player) {
+		if (player == "x")
+			this.set("xTimes", this.get("xTimes") + 1);
+		else if (player == "o")
+			this.set("oTimes", this.get("oTimes") + 1);
+		this.set("winner", player);
 	}
 
 });

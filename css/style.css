@@ -18,7 +18,8 @@
 .outer {
   position: absolute;
   bottom: 0;
-  font-size: 24px; }
+  font-size: 24px;
+  margin: 3px; }
   .outer a {
     color: #3f4944; }
 
@@ -28,7 +29,8 @@
 .wrapper {
   background-color: #efeddf;
   margin: 40px;
-  box-shadow: 0 0 30px #3f4944; }
+  box-shadow: 0 0 30px #3f4944;
+  position: relative; }
 
 body {
   background-color: #d0d0d0;

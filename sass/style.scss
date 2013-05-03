@@ -31,11 +31,11 @@ $border: 2px;
 
 .outer {
 	position: absolute;
-	bottom: 0;
-	font-size: 24px;
+	top: 0;
+	font-size: 15px;
 	margin: 3px;
 	a {
-		color: $dark;
+		color: $bright;
 	}
 }
 
@@ -48,6 +48,7 @@ $border: 2px;
 	margin: 40px;
 	box-shadow: 0 0 30px $dark;
 	position: relative;
+	min-width: 1400px;
 }
 
 	body {
@@ -60,7 +61,7 @@ $border: 2px;
 		header {
 			color: $bright;
 			background-color: $dark;
-			padding: 20px;
+			padding: 40px;
 			h1 {
 				font-size: 3.2em;
 				font-weight: normal;
@@ -71,8 +72,16 @@ $border: 2px;
 			}
 		}
 
+	.scorehalf {
+		width: 33%;
+		display: inline-block;
+		text-align: center;
+		vertical-align: top;
+		margin-top: $fieldwidth*1.5 + 40px;
+	}
+
 	.gamehalf{
-		width: 50%;
+		width: 33%;
 		display: inline-block;
 		text-align: center;
 	}
@@ -109,7 +118,7 @@ $border: 2px;
 			}
 
 	.statshalf {
-		width: 50%;
+		width: 33%;
 		display: inline-block;
 		text-align: center;
 	}

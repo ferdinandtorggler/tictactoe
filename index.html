@@ -16,32 +16,40 @@
 		</header>
 
 		<section>
-			<div class="gamehalf">
+			<div class="scorehalf">
+				<section class="scoreview"></section>
+			</div><!-- comment removes space causing line break in layout
+			--><div class="gamehalf">
 				<section class="gameview"></section>
 			</div><!-- comment removes space causing line break in layout
 			--><div class="statshalf">
 				<section class="upperstats">
-					<div class="playerview">Current player: x</div>
+					<div class="playerview"></div>
 				</section>
 				<section class="lowerstats">
-					<a href="" class="playagain undecorated">Restart Game!</a>
+					<a href="#newgame" class="playagain undecorated">Restart Game!</a>
 				</section>
 			</div>
 		</section>
 
-		<p class="backbone outer"><a class="undecorated" href="http://backbonejs.org/" target="blank">Hell yesss! this is done with Backbone.js</a></p>
+		<p class="backbone outer"><a class="undecorated" href="http://backbonejs.org/" target="blank">Hell yess! this is done with Backbone.js</a></p>
 		<p class="github outer"><a class="undecorated" href="https://github.com/ferdinandtorggler/tictactoe" target="_blank">View source code on GitHub</a></p>
 
 	</div>
 
 	<!-- TEMPLATES -->
 
+
+	<script type="text/template" id="tmp-scoreview">
+	<p>X won <%= xTimes %> times</p>
+	<p>O won <%= oTimes %> times</p>
+	</script>
 	<script type="text/template" id="tmp-fieldview">
 	<% if (!status) {print("")} else {print(status)}%>
 	</script>
 	<script type="text/template" id="tmp-playerview">
-	<p><% if (!winner) {print("Current player: " + current);} %></p>
-	<p><% if (winner) print(winner + " wins"); %></p>
+	<p><% if (!winner) {print("Current player: " + current.toUpperCase());} %></p>
+	<p><% if (winner) print(winner.toUpperCase() + " wins"); %></p>
 	</script>
 
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>

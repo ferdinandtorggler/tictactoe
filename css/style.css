@@ -17,11 +17,11 @@
 
 .outer {
   position: absolute;
-  bottom: 0;
-  font-size: 24px;
+  top: 0;
+  font-size: 15px;
   margin: 3px; }
   .outer a {
-    color: #3f4944; }
+    color: #efeddf; }
 
 .undecorated {
   text-decoration: none; }
@@ -30,7 +30,8 @@
   background-color: #efeddf;
   margin: 40px;
   box-shadow: 0 0 30px #3f4944;
-  position: relative; }
+  position: relative;
+  min-width: 1400px; }
 
 body {
   background-color: #d0d0d0;
@@ -41,7 +42,7 @@ body {
 header {
   color: #efeddf;
   background-color: #3f4944;
-  padding: 20px; }
+  padding: 40px; }
   header h1 {
     font-size: 3.2em;
     font-weight: normal; }
@@ -49,8 +50,15 @@ header {
     font-size: 0.7em;
     font-weight: normal; }
 
+.scorehalf {
+  width: 33%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  margin-top: 265px; }
+
 .gamehalf {
-  width: 50%;
+  width: 33%;
   display: inline-block;
   text-align: center; }
 
@@ -80,7 +88,7 @@ header {
   text-align: center; }
 
 .statshalf {
-  width: 50%;
+  width: 33%;
   display: inline-block;
   text-align: center; }
 

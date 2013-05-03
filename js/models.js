@@ -20,7 +20,7 @@ App.Models.Field = Backbone.Model.extend({
 App.Models.Player = Backbone.Model.extend({
 
 	defaults: {
-		current: "x",
+		current: false,
 		winner: false,
 		xTimes: 0,
 		oTimes: 0
@@ -34,11 +34,13 @@ App.Models.Player = Backbone.Model.extend({
 	},
 
 	setWinner: function (player) {
-		if (player == "x")
-			this.set("xTimes", this.get("xTimes") + 1);
-		else if (player == "o")
-			this.set("oTimes", this.get("oTimes") + 1);
-		this.set("winner", player);
+		if (this.get("winner") == false) {
+			if (player == "x")
+				this.set("xTimes", this.get("xTimes") + 1);
+			else if (player == "o")
+				this.set("oTimes", this.get("oTimes") + 1);
+			this.set("winner", player);
+		}
 	}
 
 });

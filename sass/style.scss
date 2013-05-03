@@ -29,6 +29,19 @@ $border: 2px;
 	text-align: center;
 }
 
+.outer {
+	position: absolute;
+	bottom: 0;
+	font-size: 24px;
+	a {
+		color: $dark;
+	}
+}
+
+.undecorated {
+	text-decoration: none;
+}
+
 .wrapper {
 	background-color: $bright;
 	margin: 40px;
@@ -36,7 +49,7 @@ $border: 2px;
 }
 
 	body {
-		background-color: brighten($bright, 3%);
+		background-color: desaturate(lighten($dark, 55%), 100%);
 		color: $dark;
 		font-family: "text", "sans-serif";
 		font-size: 2em;
@@ -97,7 +110,6 @@ $border: 2px;
 		width: 50%;
 		display: inline-block;
 		text-align: center;
-		height: 100%;
 	}
 
 		.upperstats {
@@ -113,21 +125,21 @@ $border: 2px;
 		}
 
 			.playagain {
-				margin-top: 10px;
+				margin-top: $fieldwidth;
 				background-color: $dark;
 				width: 300px;
 				height: 80px;
 				line-height: 80px;
 				border-radius: 5px;
-				text-decoration: none;
 				color: $bright;
 				display: inline-block;
 				text-align: center;
 			}
 
 		.backbone {
-			font-size: 18px;
-			position: absolute;
-			bottom: 0;
 			left: 0;
+		}
+
+		.github {
+			right: 0;
 		}

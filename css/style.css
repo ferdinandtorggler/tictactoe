@@ -15,13 +15,23 @@
   margin: auto auto;
   text-align: center; }
 
+.outer {
+  position: absolute;
+  bottom: 0;
+  font-size: 24px; }
+  .outer a {
+    color: #3f4944; }
+
+.undecorated {
+  text-decoration: none; }
+
 .wrapper {
   background-color: #efeddf;
   margin: 40px;
   box-shadow: 0 0 30px #3f4944; }
 
 body {
-  background-color: brighten(#efeddf, 3%);
+  background-color: #d0d0d0;
   color: #3f4944;
   font-family: "text", "sans-serif";
   font-size: 2em; }
@@ -70,8 +80,7 @@ header {
 .statshalf {
   width: 50%;
   display: inline-block;
-  text-align: center;
-  height: 100%; }
+  text-align: center; }
 
 .upperstats {
   height: 50%; }
@@ -83,19 +92,18 @@ header {
   height: 50%; }
 
 .playagain {
-  margin-top: 10px;
+  margin-top: 150px;
   background-color: #3f4944;
   width: 300px;
   height: 80px;
   line-height: 80px;
   border-radius: 5px;
-  text-decoration: none;
   color: #efeddf;
   display: inline-block;
   text-align: center; }
 
 .backbone {
-  font-size: 18px;
-  position: absolute;
-  bottom: 0;
   left: 0; }
+
+.github {
+  right: 0; }

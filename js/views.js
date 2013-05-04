@@ -56,7 +56,11 @@ App.Views.Game = Backbone.View.extend({
 
 App.Views.Player = Backbone.View.extend({
 
-	el: ".playerview",
+	el: ".statshalf",
+
+	events: {
+		"click .playagain": "newgame"
+	},
 
 	template: _.template($("#tmp-playerview").html()),
 
@@ -66,12 +70,18 @@ App.Views.Player = Backbone.View.extend({
 
 	gameEnded: function () {
 		this.render();
-		$(".playagain").removeClass("hidden").addClass("shown");
 	},
 
 	render: function () {
-		this.$el.html(this.template(this.model.attributes));
+		this.$el.find(".playerview").html(this.template(this.model.attributes));
 		return this;
+	},
+
+	newgame: function (e) {
+		e.preventDefault();
+		App.player.set("winner", false);
+		App.gameFields.reset();
+		App.Router.fillGame();
 	}
 
 });
